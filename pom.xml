@@ -121,7 +121,9 @@
         <profile>
             <id>arq-tomcat</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <property>
+                  <name>!skipArqTomcat</name>
+                </property>
             </activation>
             <properties>
                 <!--
@@ -328,8 +330,7 @@
             <id>dballocator</id>
             <activation>
                 <property>
-                    <name>test.db.type</name>
-                    <value>dballocator</value>
+                  <name>!skipDefaultProfile</name>
                 </property>
             </activation>
             <build>
@@ -347,6 +348,7 @@
                                 <dballocator.timeout.minutes>20</dballocator.timeout.minutes>
                                 <dballocator.driver.url>http://your.fileserver.example.com/postgresql-42.1.1.jar</dballocator.driver.url>
                                 <dballocator.driver.url.timeout.seconds>120</dballocator.driver.url.timeout.seconds>
+                                <test.db.type>dballocator</test.db.type>
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>
