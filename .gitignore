@@ -1,0 +1,10 @@
+.git
+.idea
+.metadata
+target
+*.iml
+
+# Package Files #
+*.jar
+*.war
+*.ear
