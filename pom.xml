@@ -4,12 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--<parent>-->
-        <!--<groupId>org.jboss</groupId>-->
-        <!--<artifactId>jboss-parent</artifactId>-->
-        <!--<version>28</version>-->
-    <!--</parent>-->
-
     <groupId>org.jboss.integration</groupId>
     <artifactId>dballocator</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -53,11 +47,6 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.apache.maven.plugins</groupId>-->
-            <!--<artifactId>maven-failsafe-plugin</artifactId>-->
-            <!--<version>3.0.0-M3</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -89,7 +78,6 @@
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging</artifactId>
             <version>${version.org.jboss.logging.jboss-logging}</version>
-            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -128,14 +116,14 @@
             <properties>
                 <!--
                     h2:
-                      By default, the integration test runs with "h2" database, platform independent and in-memory.
+                      The integration test runs with "h2" database, platform independent and in-memory.
                     pgsql:
                       If selected, the TS runs against a remote, always present PostgreSQL database server available in the Narayana CI.
                     container:
                       It requires a running Docker daemon the user executing this TS has the rights to control
                       A database is started as a Docker container and it is discarded at the end of testing.
                     dballocator:
-                      It requires an instance of DBAllocator running in your infrastructure. It enables the TS to
+                      By default, it requires an instance of DBAllocator running in your infrastructure. It enables the TS to
                       lease various databases, including but not limited to Sybase, DB2, MS SQL, Maria, Postgress, Oracle...
                     external:
                       External database is used and the caller is responsible for running it and providing details how
