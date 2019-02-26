@@ -37,9 +37,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:m-czernek/db-allocator.git</connection>
-        <developerConnection>scm:git:git@github.com:m-czernek/db-allocator.git</developerConnection>
-        <url>https://github.com/m-czernek/db-allocator</url>
+        <connection>scm:git:git@github.com:web-servers/db-allocator.git</connection>
+        <developerConnection>scm:git:git@github.com:web-servers/db-allocator.git</developerConnection>
+        <url>https://github.com/web-servers/db-allocator</url>
         <tag>HEAD</tag>
     </scm>
 
