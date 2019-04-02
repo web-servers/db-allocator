@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jboss.qa</groupId>
     <artifactId>dballocator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <name>DB Allocator services</name>
     <description>
@@ -40,7 +38,7 @@
         <connection>scm:git:git@github.com:web-servers/db-allocator.git</connection>
         <developerConnection>scm:git:git@github.com:web-servers/db-allocator.git</developerConnection>
         <url>https://github.com/web-servers/db-allocator</url>
-        <tag>HEAD</tag>
+        <tag>v1.0</tag>
     </scm>
 
     <distributionManagement>
@@ -88,7 +86,7 @@
         <version.com.h2database>1.4.195</version.com.h2database>
         <version.postgresql>9.0-801.jdbc4</version.postgresql>
 
-        <jvm.args.debug></jvm.args.debug>
+        <jvm.args.debug />
         <jvm.args.byteman>
             -Dorg.jboss.byteman.verbose -Djboss.modules.system.pkgs=org.jboss.byteman -Dorg.jboss.byteman.transform.all
             -javaagent:${project.build.directory}/lib/byteman.jar=script:${project.build.directory}/test-classes/scripts.btm,listener:true
@@ -253,10 +251,10 @@
             <properties>
                 <datasource.classname>org.h2.jdbcx.JdbcDataSource</datasource.classname>
                 <jdbc.driver.class>org.h2.Driver</jdbc.driver.class>
-                <jdbc.db.name/>
-                <jdbc.db.port/>
-                <jdbc.db.server/>
-                <jdbc.driver.jar/>
+                <jdbc.db.name />
+                <jdbc.db.port />
+                <jdbc.db.server />
+                <jdbc.driver.jar />
                 <jdbc.username>sa</jdbc.username>
                 <jdbc.password>sa</jdbc.password>
                 <jdbc.url>jdbc:h2:tcp://localhost/${project.basedir}/target/test-db;MVCC=TRUE</jdbc.url>
